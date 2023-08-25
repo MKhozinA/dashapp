@@ -1,0 +1,56 @@
+{
+    "links": [
+      {
+        "link": "/",
+        "label": "Home"
+      },
+      {
+        "link": "#1",
+        "label": "Menu",
+        "links": [
+          {
+            "link": "/docs",
+            "label": "Berita Alumni"
+          },
+          {
+            "link": "/resources",
+            "label": "Data Alumni"
+          },
+          {
+            "link": "/jobs",
+            "label": "Lowongan Pekerjaan"
+          },
+          {
+            "link": "/tracerstudy",
+            "label": "Tracer Study"
+          }
+        ]
+      },
+      {
+        "link": "/about",
+        "label": "About"
+      },
+      {
+        "link": "/support",
+        "label": "Support",
+        "links": [
+          {
+            "link": "/supportsa",
+            "label": "Kontak Kami"
+          },
+          {
+            "link": "/supportse",
+            "label": "Media Sosial"
+          },
+          {
+            "link": "/forums",
+            "label": "Forums"
+          }
+        ]
+      },
+      {
+        "link": "/LoginPage",
+        "label": "Login"
+      }
+    ]
+  }
