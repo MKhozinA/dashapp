@@ -107,7 +107,7 @@ export function HeroImageBackground() {
 
         <Container size={640}>
           <Text size="lg" className={classes.description}>
-            Temukan dan terhubung dengan alumni prodi Teknologi Informasi Universitas Muhammadiyah Yogyakarta.
+            Baca berita terbaru alumni dan temukan informasi lowongan pekerjaan. Tetap terhubung dengan alumni prodi Teknologi Informasi Universitas Muhammadiyah Yogyakarta.
           </Text>
         </Container>
 

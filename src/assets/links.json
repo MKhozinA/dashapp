@@ -5,19 +5,18 @@
         "label": "Home"
       },
       {
-        "link": "#1",
         "label": "Menu",
         "links": [
           {
-            "link": "/docs",
+            "link": "/berita",
             "label": "Berita Alumni"
           },
           {
-            "link": "/resources",
+            "link": "/dataalumni",
             "label": "Data Alumni"
           },
           {
-            "link": "/jobs",
+            "link": "/lowonganpekerjaan",
             "label": "Lowongan Pekerjaan"
           },
           {
@@ -32,24 +31,10 @@
       },
       {
         "link": "/support",
-        "label": "Support",
-        "links": [
-          {
-            "link": "/supportsa",
-            "label": "Kontak Kami"
-          },
-          {
-            "link": "/supportse",
-            "label": "Media Sosial"
-          },
-          {
-            "link": "/forums",
-            "label": "Forums"
-          }
-        ]
+        "label": "Support"
       },
       {
-        "link": "/LoginPage",
+        "link": "/login",
         "label": "Login"
       }
     ]

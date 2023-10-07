@@ -1,17 +1,10 @@
 import { useState } from 'react';
 import { createStyles, Navbar, Group, Code, getStylesRef, rem } from '@mantine/core';
 import {
-  IconBellRinging,
-  IconFingerprint,
-  IconKey,
-  IconSettings,
-  Icon2fa,
-  IconDatabaseImport,
-  IconReceipt2,
-  IconSwitchHorizontal,
   IconLogout,
 } from '@tabler/icons-react';
-// import { MantineLogo } from '';
+import { navItems } from "./navItems";
+import { Link, useLocation } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   navbar: {
@@ -84,55 +77,38 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const data = [
-  { link: '', label: 'Notifications', icon: IconBellRinging },
-  { link: '', label: 'Billing', icon: IconReceipt2 },
-  { link: '', label: 'Security', icon: IconFingerprint },
-  { link: '', label: 'SSH Keys', icon: IconKey },
-  { link: '', label: 'Databases', icon: IconDatabaseImport },
-  { link: '', label: 'Authentication', icon: Icon2fa },
-  { link: '', label: 'Other Settings', icon: IconSettings },
-];
-
-export function NavbarSimpleColored() {
+export function MainNavbar() {
   const { classes, cx } = useStyles();
-  const [active, setActive] = useState('Billing');
+  
+  const { pathname } = useLocation();
 
-  const links = data.map((item) => (
-    <a
-      className={cx(classes.link, { [classes.linkActive]: item.label === active })}
-      href={item.link}
+  const links = navItems.map((item) => (
+    <Link
+      className={cx(classes.link, { [classes.linkActive]: item.link === pathname })}
+      to={item.link}
       key={item.label}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(item.label);
-      }}
+      
     >
       <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
-    </a>
+    </Link>
   ));
 
   return (
-    <Navbar height={700} width={{ sm: 300 }} p="md" className={classes.navbar}>
+    <Navbar width={{ sm: 300 }} p="md" className={classes.navbar}>
       <Navbar.Section grow>
         <Group className={classes.header} position="apart">
-          {/* <MantineLogo size={28} inverted /> */}
-          <Code className={classes.version}>v3.1.2</Code>
+
+          <Code className={classes.version}>Admin</Code>
         </Group>
         {links}
       </Navbar.Section>
 
       <Navbar.Section className={classes.footer}>
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
-          <span>Change account</span>
-        </a>
-
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
+        <Link to="/login" className={classes.link}>
           <IconLogout className={classes.linkIcon} stroke={1.5} />
           <span>Logout</span>
-        </a>
+        </Link>
       </Navbar.Section>
     </Navbar>
   );

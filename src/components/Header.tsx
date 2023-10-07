@@ -2,7 +2,7 @@ import { createStyles, Header, Menu, Group, Center, Burger, Container, rem, Imag
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons-react';
 import banner from "../assets/bannerumy.png";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
     header: {
@@ -68,7 +68,7 @@ export function HeaderMenuColored({ links }: HeaderSearchProps) {
 
     const items = links.map((link) => {
         const menuItems = link.links?.map((item) => (
-            <Menu.Item key={item.link}>{item.label}</Menu.Item>
+            <Menu.Item component={Link} to={item.link??"#"}>{item.label}</Menu.Item>
         ));
 
         if (menuItems) {
