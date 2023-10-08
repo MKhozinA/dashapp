@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 
 export const MainDashboardPage = () => {
     const handleClick = () => {
-        alert("Hello");
+        const confirmation = window.confirm(
+            "Data yang terhapus tidak dapat kembali. Apakah Anda yakin ingin menghapus data?"
+          );
+        
+          if (confirmation) {
+            alert("Data berhasil dihapus.");
+          } else {
+            alert("Penghapusan data dibatalkan.");
+          }
     };
     return (
         <><Title order={6}>Main Dashboard</Title>
@@ -17,7 +25,7 @@ export const MainDashboardPage = () => {
 
             <Button component={Link} to="/admindataalumni">Lihat</Button>
 
-            <Button onClick={handleClick}>User</Button>
+            <Button onClick={handleClick}>Delete</Button>
            
         </section></>
     );

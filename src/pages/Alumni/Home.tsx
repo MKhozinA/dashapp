@@ -1,8 +1,8 @@
 import { AppShell } from "@mantine/core";
-import { FooterLinks } from "../components/Footer";
-import { HeaderMenuColored } from "../components/Header";
-import { HeroImageBackground } from "../components/HeroText";
-import { links } from '../assets/links.json';
+import { FooterLinks } from "../../components/Footer";
+import { HeaderMenuColored } from "../../components/Header";
+import { HeroImageBackground } from "../../components/HeroText";
+import { links } from '../../assets/links.json';
 export default function IndexPage() {
     return (<DashboardLayout>
         <HeroImageBackground></HeroImageBackground>

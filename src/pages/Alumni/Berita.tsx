@@ -1,5 +1,5 @@
 import { DashboardLayout } from "./Home";
-import { FooterLinks } from "../components/Footer";
+import { FooterLinks } from "../../components/Footer";
 export default function BeritaPage() {
     return <DashboardLayout>
         <div id="body">

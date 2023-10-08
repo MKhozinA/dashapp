@@ -1,22 +1,22 @@
 {
     "links": [
       {
-        "link": "/",
+        "link": "/homepage",
         "label": "Home"
       },
       {
         "label": "Menu",
         "links": [
           {
-            "link": "/berita",
+            "link": "/alumni/berita",
             "label": "Berita Alumni"
           },
           {
-            "link": "/dataalumni",
+            "link": "/alumni/dataalumni",
             "label": "Data Alumni"
           },
           {
-            "link": "/lowonganpekerjaan",
+            "link": "/alumni/lowonganpekerjaan",
             "label": "Lowongan Pekerjaan"
           },
           {
@@ -34,8 +34,17 @@
         "label": "Support"
       },
       {
-        "link": "/login",
-        "label": "Login"
+        "label": "Nama Akun",
+        "links": [
+          {
+            "link": "/akunsaya",
+            "label": "Akun Saya"
+          },
+          {
+            "link": "/login",
+            "label": "Logout"
+          }
+        ]
       }
     ]
   }
